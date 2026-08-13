@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Microgreens | Farm to Table Nutrition</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2C5E3B',
+                        sage: '#87A96B',
+                        cream: '#F4F1EA',
+                        earth: '#4A3B32'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-earth font-sans antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-forest">🌱 GreenSprout</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#products" class="hover:text-forest transition">Products</a>
+                <a href="#benefits" class="hover:text-forest transition">Benefits</a>
+                <a href="#about" class="hover:text-forest transition">Our Farm</a>
+                <a href="#contact" class="hover:text-forest transition">Order Now</a>
+            </nav>
+            <div>
+                <a href="#contact" class="bg-forest text-white px-5 py-2.5 rounded-full font-medium hover:bg-sage transition shadow-sm">Get Fresh Box</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-sage/10 to-cream py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-block bg-sage/20 text-forest text-sm font-semibold px-4 py-1.5 rounded-full">100% Organic & Locally Grown</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-forest leading-tight">
+                    Tiny Greens, <br><span class="text-sage">Maximum Nutrition.</span>
+                </h1>
+                <p class="text-lg text-earth/80">
+                    Harvested fresh weekly right in your city. Elevate your meals with nutrient-packed microgreens bursting with flavor, color, and vitality.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-forest text-white text-center px-8 py-3.5 rounded-full font-medium hover:bg-sage transition shadow-md">Explore Menu</a>
+                    <a href="#benefits" class="border-2 border-forest text-forest text-center px-8 py-3.5 rounded-full font-medium hover:bg-forest hover:text-white transition">Why Microgreens?</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-full h-96 bg-sage/30 rounded-3xl overflow-hidden shadow-xl flex items-center justify-center border-4 border-white">
+                    <div class="text-center p-6">
+                        <span class="text-6xl">🌿</span>
+                        <p class="mt-4 font-semibold text-forest text-lg">Harvested 24 Hours Before Delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-forest sm:text-4xl">Our Fresh Harvest</h2>
+                <p class="mt-4 text-earth/80">Choose from our selection of crisp, flavorful microgreens grown sustainably without pesticides.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-sage/20 shadow-sm hover:shadow-md transition">
+                    <div class="h-48 bg-sage/20 flex items-center justify-center text-4xl">🌱</div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage">Mild & Sweet</span>
+                        <h3 class="text-xl font-bold text-forest">Broccoli Microgreens</h3>
+                        <p class="text-sm text-earth/80">Packed with sulforaphane and vital antioxidants. Subtle, earthy taste perfect for smoothies and salads.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-sage/20">
+                            <span class="text-lg font-bold text-forest">₹150 / tray</span>
+                            <a href="#contact" class="bg-forest text-white text-sm px-4 py-2 rounded-lg hover:bg-sage transition">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-sage/20 shadow-sm hover:shadow-md transition">
+                    <div class="h-48 bg-sage/20 flex items-center justify-center text-4xl">🌿</div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage">Nutty & Crunchy</span>
+                        <h3 class="text-xl font-bold text-forest">Sunflower Greens</h3>
+                        <p class="text-sm text-earth/80">Thick, crunchy stems with a delightful nutty flavor. Excellent source of complete plant-based protein.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-sage/20">
+                            <span class="text-lg font-bold text-forest">₹180 / tray</span>
+                            <a href="#contact" class="bg-forest text-white text-sm px-4 py-2 rounded-lg hover:bg-sage transition">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-sage/20 shadow-sm hover:shadow-md transition">
+                    <div class="h-48 bg-sage/20 flex items-center justify-center text-4xl">🍃</div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage">Spicy & Bold</span>
+                        <h3 class="text-xl font-bold text-forest">Radish Daikon</h3>
+                        <p class="text-sm text-earth/80">A vibrant pink-stemmed green that packs a spicy, peppery punch. Great for garnishing tacos and soups.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-sage/20">
+                            <span class="text-lg font-bold text-forest">₹160 / tray</span>
+                            <a href="#contact" class="bg-forest text-white text-sm px-4 py-2 rounded-lg hover:bg-sage transition">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits -->
+    <section id="benefits" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold text-forest sm:text-4xl">Up to 40x More Nutrients Than Mature Greens</h2>
+                    <p class="text-earth/80">
+                        Don't let their small size fool you. Studies show that microgreens pack significantly higher concentrations of vitamins, minerals, and antioxidants compared to full-sized vegetables.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
+                            <span><strong>Immune Boosting:</strong> Rich in Vitamin C, E, and beta-carotene.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
+                            <span><strong>Zero Pesticides:</strong> Grown in controlled indoor environments clean of chemicals.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
+                            <span><strong>Maximum Freshness:</strong> Delivered alive in living trays or freshly harvested.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-forest text-white p-8 lg:p-12 rounded-3xl shadow-xl space-y-6">
+                    <h3 class="text-2xl font-bold">Subscription Plans</h3>
+                    <p class="text-cream/80">Get fresh microgreens delivered to your doorstep weekly or bi-weekly. Pause or cancel anytime.</p>
+                    <div class="border-t border-white/20 pt-6 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>Weekly Taster Box (2 Varieties)</span>
+                            <span class="font-bold text-lg">₹300 / delivery</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Family Pack (4 Varieties)</span>
+                            <span class="font-bold text-lg">₹550 / delivery</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="block w-full text-center bg-sage text-forest font-bold py-3.5 rounded-full hover:bg-white transition">Start Subscription</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order / Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-forest">Place Your Order</h2>
+                <p class="mt-2 text-earth/80">Fill out the form below to book your harvest or subscribe today.</p>
+            </div>
+            
+            <form class="bg-cream p-8 rounded-3xl border border-sage/20 shadow-sm space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your order! We will contact you shortly.');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-earth mb-2">Full Name</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-earth mb-2">Phone Number</label>
+                        <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-earth mb-2">Select Product / Plan</label>
+                    <select class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                        <option>Broccoli Microgreens (₹150)</option>
+                        <option>Sunflower Greens (₹180)</option>
+                        <option>Radish Daikon (₹160)</option>
+                        <option>Weekly Taster Box Subscription (₹300)</option>
+                        <option>Family Pack Subscription (₹550)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-earth mb-2">Delivery Address</label>
+                    <textarea rows="3" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-forest text-white py-4 rounded-full font-bold hover:bg-sage transition shadow-md">Confirm Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-cream py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between">
+            <div class="flex items-center space-x-2 mb-4 sm:mb-0">
+                <span class="text-2xl font-bold">🌱 GreenSprout</span>
+            </div>
+            <p class="text-sm text-cream/70">&copy; 2026 GreenSprout Microgreens. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
