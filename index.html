@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Header Meta Tags (Client-Fallback) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
     <title>Fresh Microgreens | Farm to Table Nutrition</title>
-    <!-- Tailwind CSS CDN -->
+    
+    <!-- Note: For production, build Tailwind locally instead of using the Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,7 +66,7 @@
             <div class="relative">
                 <div class="w-full h-96 bg-sage/30 rounded-3xl overflow-hidden shadow-xl flex items-center justify-center border-4 border-white">
                     <div class="text-center p-6">
-                        <span class="text-6xl">🌿</span>
+                        <span class="text-6xl" role="img" aria-label="Herb">🌿</span>
                         <p class="mt-4 font-semibold text-forest text-lg">Harvested 24 Hours Before Delivery</p>
                     </div>
                 </div>
@@ -122,49 +128,6 @@
         </div>
     </section>
 
-    <!-- Health Benefits -->
-    <section id="benefits" class="py-20 bg-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold text-forest sm:text-4xl">Up to 40x More Nutrients Than Mature Greens</h2>
-                    <p class="text-earth/80">
-                        Don't let their small size fool you. Studies show that microgreens pack significantly higher concentrations of vitamins, minerals, and antioxidants compared to full-sized vegetables.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-3">
-                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
-                            <span><strong>Immune Boosting:</strong> Rich in Vitamin C, E, and beta-carotene.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
-                            <span><strong>Zero Pesticides:</strong> Grown in controlled indoor environments clean of chemicals.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="bg-sage text-white rounded-full p-1 text-xs mt-1">✓</span>
-                            <span><strong>Maximum Freshness:</strong> Delivered alive in living trays or freshly harvested.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-forest text-white p-8 lg:p-12 rounded-3xl shadow-xl space-y-6">
-                    <h3 class="text-2xl font-bold">Subscription Plans</h3>
-                    <p class="text-cream/80">Get fresh microgreens delivered to your doorstep weekly or bi-weekly. Pause or cancel anytime.</p>
-                    <div class="border-t border-white/20 pt-6 space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span>Weekly Taster Box (2 Varieties)</span>
-                            <span class="font-bold text-lg">₹300 / delivery</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span>Family Pack (4 Varieties)</span>
-                            <span class="font-bold text-lg">₹550 / delivery</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="block w-full text-center bg-sage text-forest font-bold py-3.5 rounded-full hover:bg-white transition">Start Subscription</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Order / Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,30 +136,31 @@
                 <p class="mt-2 text-earth/80">Fill out the form below to book your harvest or subscribe today.</p>
             </div>
             
-            <form class="bg-cream p-8 rounded-3xl border border-sage/20 shadow-sm space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your order! We will contact you shortly.');">
+            <!-- SECURED FORM: Explicit method, attributes, autocomplete, and strict pattern constraints -->
+            <form id="orderForm" method="POST" action="YOUR_SECURE_BACKEND_ENDPOINT" class="bg-cream p-8 rounded-3xl border border-sage/20 shadow-sm space-y-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-medium text-earth mb-2">Full Name</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                        <label for="fullName" class="block text-sm font-medium text-earth mb-2">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required maxlength="100" autocomplete="name" class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-earth mb-2">Phone Number</label>
-                        <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                        <label for="phone" class="block text-sm font-medium text-earth mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" autocomplete="tel" class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-earth mb-2">Select Product / Plan</label>
-                    <select class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
-                        <option>Broccoli Microgreens (₹150)</option>
-                        <option>Sunflower Greens (₹180)</option>
-                        <option>Radish Daikon (₹160)</option>
-                        <option>Weekly Taster Box Subscription (₹300)</option>
-                        <option>Family Pack Subscription (₹550)</option>
+                    <label for="product" class="block text-sm font-medium text-earth mb-2">Select Product / Plan</label>
+                    <select id="product" name="product" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest">
+                        <option value="broccoli">Broccoli Microgreens (₹150)</option>
+                        <option value="sunflower">Sunflower Greens (₹180)</option>
+                        <option value="radish">Radish Daikon (₹160)</option>
+                        <option value="taster-box">Weekly Taster Box Subscription (₹300)</option>
+                        <option value="family-pack">Family Pack Subscription (₹550)</option>
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-earth mb-2">Delivery Address</label>
-                    <textarea rows="3" required class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest"></textarea>
+                    <label for="address" class="block text-sm font-medium text-earth mb-2">Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" required maxlength="500" autocomplete="street-address" class="w-full px-4 py-3 rounded-xl border border-sage/30 bg-white focus:outline-none focus:ring-2 focus:ring-forest"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-forest text-white py-4 rounded-full font-bold hover:bg-sage transition shadow-md">Confirm Order</button>
             </form>
